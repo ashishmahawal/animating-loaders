@@ -1,0 +1,1 @@
+**Cool Simple Animating Loaders for logging**
