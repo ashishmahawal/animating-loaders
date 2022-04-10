@@ -32,6 +32,59 @@ async function rotating_stick(logline) {
     i++;
   }
 }
+/**
+ * Rotating Hand Animation
+ * @param  logline {String to be appended before loading animation}
+ */
+ async function rotating_hand(logline) {
+  stop = false;
+  let animatedHand = ['👆', '👉', '👇', '👈'];
+  let i = 0;
+  while (!stop) {
+    i = i % 4;
+    await sleep(100);
+    if (logline && !stop) {
+      printLogline(`${logline} ${animatedHand[i]}`);
+    }
+    i++;
+  }
+}
+
+/**
+ * Filling Circle Animation
+ * @param  logline {String to be appended before loading animation}
+ */
+ async function filling_circle(logline) {
+  stop = false;
+  let animatedHand = ['○','◔','◕','●'];
+  let i = 0;
+  while (!stop) {
+    i = i % 4;
+    await sleep(450);
+    if (logline && !stop) {
+      printLogline(`${logline} ${animatedHand[i]}`);
+    }
+    i++;
+  }
+}
+
+/**
+ * Colour Changing Hearts Animation
+ * @param  logline {String to be appended before loading animation}
+ */
+ async function hearts(logline) {
+  stop = false;
+  let animatedHand = ['💚', '💛', '🧡', '🤎']
+  let i = 0;
+  while (!stop) {
+    i = i % 4;
+    await sleep(200);
+    if (logline && !stop) {
+      printLogline(`${logline} ${animatedHand[i]}`);
+    }
+    i++;
+  }
+}
 
 /**
  * Filling Bar Animation
@@ -104,4 +157,7 @@ module.exports = {
   filling_bar,
   seconds_meter,
   basketball,
+  rotating_hand,
+  filling_circle,
+  hearts
 };
